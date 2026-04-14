@@ -390,106 +390,40 @@ a {
 
 
 @media (max-width: 768px) {
+  /* stop horizontal overflow that causes scrolling */
+  html, body {
+    overflow-x: hidden;
+  }
 
-	/* Prevent sideways scrolling caused by 120% widths/margins */
-	html,
-	body {
-		width: 100%;
-		overflow-x: hidden;
-	}
+  /* keep photo inside viewport even if other breakpoints set 120% */
+  #myphotos{
+    width: min(420px, 92vw) !important;
+    max-width: 100% !important;
+    margin-bottom: 0 !important;
+  }
 
-	/* Use dynamic viewport height so mobile browser bars don't break 100vh */
-	.main,
-	.left,
-	.right,
-	.text {
-		height: auto;
-		min-height: 100svh;
-	}
+  /* make socials always visible + no need to scroll sideways */
+  .social{
+    width: 100%;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;         /* key: wraps icons instead of overflowing */
+    gap: 10px;
+    padding: 10px 0 16px;
+    margin: 0 !important;
+  }
 
-	/* Stack sections cleanly */
-	.main {
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		gap: 18px;
-		padding: 18px 14px 22px;
-	}
+  .social i{
+    margin: 0 !important;
+    font-size: clamp(18px, 6vw, 32px);
+  }
 
-	/* Make both columns full width on mobile */
-	.left,
-	.right {
-		width: 100%;
-	}
-
-	.right {
-		justify-content: center;
-		align-items: center;
-	}
-
-	/* Center logo + reduce padding */
-	.logo {
-		width: 100%;
-		justify-content: center;
-		padding: 10px 0 6px;
-	}
-
-	/* Fix the big desktop offset */
-	.text {
-		width: 100%;
-		margin-left: 0 !important;
-		/* overrides the desktop margin-left */
-		text-align: center;
-		justify-content: center;
-		align-items: center;
-		gap: 10px;
-		padding: 6px 6px 0;
-		font-size: inherit;
-		/* avoid weird 0px rules from your older breakpoints */
-	}
-
-	/* Smooth responsive type (no more many breakpoints) */
-	.name {
-		font-size: clamp(28px, 6vw, 38px);
-	}
-
-	.text span {
-		font-size: clamp(26px, 8vw, 56px);
-		letter-spacing: 0.06em;
-	}
-
-	/* Social icons scale nicely + wrap if needed */
-	.social {
-		margin: 10px 0 0;
-		display: flex;
-		justify-content: center;
-		flex-wrap: wrap;
-		gap: 10px;
-	}
-
-	.social i {
-		font-size: clamp(18px, 5.5vw, 32px);
-		margin: 0;
-		/* gap handles spacing */
-	}
-
-	/* Mobile photo: never exceed container width */
-	#myphotos {
-		display: block;
-		width: min(420px, 92vw) !important;
-		/* overrides your 120% */
-		max-width: 100%;
-		height: auto;
-		border-radius: 24px;
-		margin: 0 !important;
-		/* removes negative margins */
-		box-shadow: inset 0 0 100px #000;
-	}
-
-	/* Ensure desktop photo stays hidden on mobile */
-	#myphoto {
-		display: none;
-	}
+  /* optional: reduce vertical space so socials fit above fold */
+  .main{
+    min-height: 100svh;
+    padding-bottom: 16px;
+  }
 }
 
 
