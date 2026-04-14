@@ -414,9 +414,9 @@ a {
     margin: 0 !important;
   }
 
-  .social i{
-    margin: 0 !important;
-    font-size: clamp(18px, 6vw, 32px);
+  .social i {
+    font-size: clamp(28px, 9vw, 44px) !important;
+    margin: 0 10px !important;
   }
 
   /* optional: reduce vertical space so socials fit above fold */
