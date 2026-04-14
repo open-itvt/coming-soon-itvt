@@ -448,15 +448,6 @@ a {
 
 	}
 
-
-	.social i {
-
-		font-size: 27px;
-
-		margin: 0 7px;
-
-	}
-
 }
 
 
@@ -498,14 +489,6 @@ a {
 	}
 
 
-	.social i {
-
-		font-size: 20px;
-
-		margin: 0 5px;
-
-	}
-
 }
 
 @media only screen and (max-width:380px) {
@@ -543,14 +526,6 @@ a {
 	.text span {
 
 		font-size: 28px;
-
-	}
-
-	.social i {
-
-		font-size: 17px;
-
-		margin: 0 5px;
 
 	}
 
@@ -595,14 +570,6 @@ a {
 
 	}
 
-	.social i {
-
-		font-size: 17px;
-
-		margin: 0 5px;
-
-	}
-
 
 }
 
@@ -644,15 +611,6 @@ a {
 		font-size: 25px;
 
 	}
-
-	.social i {
-
-		font-size: 14px;
-
-		margin: 0 5px;
-
-	}
-
 
 }
 
@@ -700,13 +658,6 @@ a {
 
 	}
 
-	.social i {
-
-		font-size: 10px;
-
-		margin: 0 5px;
-
-	}
 
 
 }
